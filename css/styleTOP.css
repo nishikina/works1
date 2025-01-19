@@ -1,0 +1,119 @@
+@charset "UFT-8";
+
+body {
+  font: normal 16px/1.8em Arial,Helvetica,sans-serif;;
+  color: #666013;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+
+/* Header */
+header{
+  border-top: 20px solid #666013;
+}
+.header__image{
+  position: relative;
+  height: 600px;
+  background: #666013 url('../image/head.aardvark.jpg')no-repeat right center / cover;
+}
+.header__text {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: white;
+  font-size: 100px; 
+  text-align: center;
+}
+.header__image img{
+  position: absolute;
+  top: -60px;
+  right: 5vw;
+}
+
+nav{
+  background-color: #666013;
+}
+nav ul{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+nav ul li{
+  width: 120px;
+  height: 50px;
+}
+nav ul li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+
+/* Main Content */
+.main__image img {
+  width: 100%;
+  height: auto; 
+  display: block;
+  margin: 0 auto; 
+}
+
+/* Footer */
+footer{
+  text-align: center;    
+}
+.footer__copy{
+  color: #fff;
+  padding: 60px 0 70px;
+  background-color: #666013;
+}
+
+/* --- Media Queries for Responsive Design --- */
+
+/* Tablet (max-width: 1215px) */
+
+@media screen and (max-width:1215px) {
+  .header__image{
+    height: 400px;
+  }
+  nav ul{
+    width:100%;
+  }
+}
+
+/* Smartphone (max-width: 768px) */
+@media screen and (max-width:768px){
+  /* Header adjustments */
+  .header__image {
+    height: 300px;
+    background-size: cover;
+  }
+  .header__text {
+    font-size: 50px;
+    padding: 0 20px;
+  }
+  nav ul{
+    flex-wrap:wrap;
+    padding: 10px 0;
+  }
+  nav ul li{
+    flex: 1 1 calc(50% - 20px); /* Two items per row */
+    margin: 10px 0;
+  }
+  nav ul li a{
+    border:1px solid #fff;
+    padding: 10px 0;
+  }
+  .footer__copy {
+    font-size: 14px;
+    padding: 40px 0;
+  }
+}

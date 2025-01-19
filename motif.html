@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>こんなところにも</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #bb2d2d;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #7a797988;
+            color: #fff;
+            padding: 1em;
+            font-size: 1.5em;
+        }
+        .vision{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }        
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #dac1c1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards; 
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .image2{
+            margin-top: 50%;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        li {
+            position: relative;
+        }
+        dl {
+            position: absolute;
+	        inset: 0;
+	        margin: 0;
+	        padding: 16px 24px;
+	        border-radius: 8px;
+	        color: white;
+	        background: rgba(122, 104, 109, 0.9);
+        }
+        
+        .type1 {
+            overflow: hidden;
+            
+        }
+        .type1 dl {
+	        opacity: 0;
+	        transform: translateY(100%);
+	        transition: opacity .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .type1:hover dl {
+	        opacity: 1;
+	        transform: none;
+        }
+        .type1 dl {
+	        transition: opacity .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .type1:not(:hover) dl {
+	        opacity: 0;
+	        transform: translateY(100%);
+        }
+        
+
+        /* フェードインのキーフレームを定義 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /* ここからレスポンシブ対応 */
+        @media screen and (max-width: 1024px) {
+            header {
+                font-size: 1.2em;
+            }
+
+            .vision {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .image2 {
+                margin-top: 30%;
+            }
+
+            img {
+                width: 60%;
+                height: auto;
+            }
+            
+            .type1 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            dl {
+                position: relative;
+                background: rgba(122, 104, 109, 0.9);
+                padding: 12px 18px;
+                border-radius: 8px;
+            }
+            footer a img {
+                width: 30%; /* 画像の幅を調整 */
+                max-width: 500px; /* 最大幅を指定（任意） */
+                height: auto; /* 高さは自動調整 */
+            }
+        }
+
+        /* スマホサイズ対応 */
+        @media screen and (max-width: 768px) {
+            header {
+                font-size: 1.1em;
+                padding: 0.8em;
+            }
+
+            .vision {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            section {
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+            .image2 {
+                margin-top: 20%;
+            }
+
+            img {
+                width: 60%;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            dl {
+                position: relative;
+                background: rgba(122, 104, 109, 0.9);
+                padding: 10px 15px;
+                border-radius: 8px;
+                color: white;
+            }
+            footer a img {
+                width: 30%; /* 画像の幅を調整 */
+                max-width: 500px; /* 最大幅を指定（任意） */
+                height: auto; /* 高さは自動調整 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ツチブタモチーフのキャラクター</h1>
+    </header>
+
+    <section class="vision">       
+            
+            <ul class="details">
+                <li class="type1">
+                    <figure class="image"><img src="./image/set_god.png" alt="セト" width="200" height="400"></figure>
+                    <dl class="text">
+                        <h2>セト神</h2>
+                        <dd>エジプト神話における戦争の神。<br>セトはジャッカル（エジプトジャッカル＝オオカミ）の頭をした神であると思われているが、<br>壁画などで表現されているセトの頭はツチブタのものである。</dd>
+                    </dl>
+                </li>                
+            </ul>
+
+            <ul class="details">
+                <li class="type1">
+                    <figure class="image2"><img src="./image/sniff.png" alt="スニフ" width="200" height="400"></figure>
+                    <dl class="text">
+                        <h2>スニフ</h2>
+                        <dd>大きくて先のとがった耳と長いしっぽが特徴の、ムーミントロールの友だち。見た目はカンガルーに似ているが、スニフの名前の由来は、英語で「嗅ぐ」を意味する「sniff」から。よって、スニフはカンガルーではなく、より嗅覚の鋭いツチブタをモデルにした生き物なのではないか、と言う説もある。もっとも、原作者の「トーベ・ヤンセン」が亡くなっているので、真実は分からない。</dd>
+                    </dl>
+                </li>                
+            </ul>
+            
+    </section>
+</body>
+<footer>
+    <a href="index.html">
+        <img src="./image/back_to_top.png" alt="TOPへ戻る"></a>   
+
+    
+        <p>&copy; 2024 ツチブタのHP</p>
+</footer>
+</html>

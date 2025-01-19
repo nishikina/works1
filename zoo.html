@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022.1.9 東山動物園にて</title>
+</head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+        }
+        #text{
+            text-align: center;
+            width: 50%;
+        }
+
+
+        .tabBtn {
+        display: flex;
+        list-style: none;
+        margin: 0 0 1px;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+    }
+    .tabBtn li {
+        flex-basis: 20%;
+        background: #86c0de;
+    }
+    .tabBtn li:not(:last-child) {
+        border-right: 1px solid white;
+    }
+    .tabBtn label {
+        display: block;
+        cursor: pointer;
+        padding: 20px 20px;
+        color: white;
+        transition: background .3s;
+    }
+    .tabBtn label:hover {
+        background: rgba(220,102,136,.5);
+    }
+    
+    .tabContents{
+        display: flex;
+    }
+    
+    .tabContents section {
+        opacity: .1;
+        background: white; 
+        padding: 8px;
+        display: flex; 
+        justify-content: space-around; 
+    }
+    
+    #tab-1:checked ~ .tabBtn label[for="tab-1"],
+    #tab-2:checked ~ .tabBtn label[for="tab-2"],
+    #tab-3:checked ~ .tabBtn label[for="tab-3"],
+    #tab-4:checked ~ .tabBtn label[for="tab-4"] {
+        background: #dc6688;
+
+    }
+    #tab-1:checked ~ .tabContents #section-1,
+    #tab-2:checked ~ .tabContents #section-2,
+    #tab-3:checked ~ .tabContents #section-3,
+    #tab-4:checked ~ .tabContents #section-4 {
+        opacity: 1;
+        background: white;
+    }
+    .tabContents img{
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+        border-radius: 1px;
+        overflow: hidden;
+    }
+
+    @media screen and (max-width:1215px) {
+        .tabContents img{
+            width: 100%;
+            height: auto;
+        }        
+    }
+
+    @media screen and (max-width:768px){
+        .tabContents img{
+            width: 80%;
+            height: auto;
+        }    
+    }
+    input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .image {
+            width: 48%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+            margin-top: auto;
+            width: 100%;
+        }
+    </style>
+
+<body>
+    <div id="header">
+        <h1> 東山動物園にて</h1>
+        2022.1.9
+    </div>
+
+    <div id="text">
+        <p>日本の動物園にもツチブタは居ます。
+        現在飼育されているのは、
+        <br>東京の上野動物園、静岡の日本平動物園、
+        愛知県の豊橋総合動植物公園、
+        <br>同じく愛知県の東山動物園です。
+        その中の東山動物園に少し前ですが、行ってきました。
+        <br>(イケメンゴリラ シャバーニで有名な所です！)
+        その時の写真が残っていたので、<br>少しお見せします。
+        何故かすごく画素が荒いので超見にくいです・・・！<br>
+        すいません！
+        </p>        
+    </div>
+    
+    </style>
+    </head>
+    <input type="radio" name="switch" id="tab-1" checked>
+    <input type="radio" name="switch" id="tab-2">
+    <input type="radio" name="switch" id="tab-3">
+    <input type="radio" name="switch" id="tab-4">
+    <ul class="tabBtn">
+        <li><label for="tab-1"></label></li>
+        <li><label for="tab-2"></label></li>
+        <li><label for="tab-3"></label></li>
+        <li><label for="tab-4"></label></li>
+    </ul>
+    <div class="tabContents">
+        <section id="section-1">
+            <img src="./image/higashiyama_1.JPG" alt="タブコンテンツ1の画像" style="width: 100%">
+        </section>
+        <section id="section-2">
+            <img src="./image/higashiyama_2.JPG" alt="タブコンテンツ2の画像" style="width: 100%">
+        </section>
+        <section id="section-3">
+            <img src="./image/higashiyama_3.JPG" alt="タブコンテンツ3の画像" style="width: 100%">
+        </section>
+        <section id="section-4">
+            <img src="./image/higashiyama_4.jpg" alt="タブコンテンツ4の画像" style="width: 100%">
+        </section>
+    </div>
+          
+    
+    <div id="footer">
+        <a href="index.html">
+            <img src="./image/back_to_top.png">
+        </a>
+        <p>&copy; 2024 ツチブタのHP</p>
+    </div>
+    
+</body>
+</html>
