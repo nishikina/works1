@@ -22,3 +22,6 @@
     ```
 
 2. ローカルでファイルを開き、ブラウザで確認します。`index.html` からお入りください。
+
+## スクリーンショット
+![image](https://github.com/user-attachments/assets/38960589-1a5a-40c3-9a2d-7561a5841b83)
