@@ -18,7 +18,7 @@
 
 1. リポジトリをクローンします:
     ```bash
-    git clone [https://github.com/your-username/your-repository.git](https://github.com/nishikina/works1.git)
+    git clone https://github.com/nishikina/works1.git
     ```
 
 2. ローカルでファイルを開き、ブラウザで確認します。`index.html` からお入りください。
